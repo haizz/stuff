@@ -3,7 +3,14 @@
 Think of it as a remote key-value map (dict) with immutable items which
 can replicate itself over a network of similar nodes.
 
-Typical usage:
+Requirements
+------------
+
+1. Python 2.7+
+2. Thrift Python bindings.
+
+Typical usage
+-------------
 
 1. Start several nodes of stuff.
 2. Introduce them to each other by making meet_neighbor call.
@@ -23,7 +30,8 @@ Stuff uses Apache Thrift for client-server and server-server communications.
 
 See demo.py for an example.
 
-Issues (in the name of simplicity):
+Issues (in the name of simplicity)
+----------------------------------
 
 1. No connection pooling in client.
 2. Single-threaded server.
